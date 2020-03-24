@@ -1,5 +1,5 @@
 import { on } from '@ngrx/store';
-import { SessionLoginRequest } from '../actions';
+import { SessionLoginRequest, SessionLoginSuccess, SessionLoginFailure } from '../actions';
 import { ISessionState } from './state/state.model';
 
 export const sessionLoginReducers = [
@@ -10,7 +10,7 @@ export const sessionLoginReducers = [
       loading: true
     }
   })),
-  on(SessionLoginRequest, (state: ISessionState, data: any) => ({
+  on(SessionLoginSuccess, (state: ISessionState, data: any) => ({
     ...state,
     login: {
       loading: false,
@@ -18,7 +18,7 @@ export const sessionLoginReducers = [
       data
     }
   })),
-  on(SessionLoginRequest, (state: ISessionState, error: any) => ({
+  on(SessionLoginFailure, (state: ISessionState, error: any) => ({
     ...state,
     login: {
       ...state.login,

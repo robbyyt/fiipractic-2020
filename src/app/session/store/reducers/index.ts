@@ -11,5 +11,5 @@ const sessionReducers = createReducer(
 );
 
 export function sessionReducer(state: ISessionState, action: Action) {
-  sessionReducers(state, action);
+  return sessionReducers(state, action);
 }

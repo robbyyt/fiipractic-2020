@@ -4,15 +4,15 @@ import { ISessionState } from './reducers/state/state.model';
 const sessionSelector = createFeatureSelector('session');
 
 // Login Selectors
-const sessionLoginLoading = createSelector(
+export const sessionLoginLoadingSelector = createSelector(
   sessionSelector,
   (state: ISessionState) => state.login.loading
 );
-const sessionLoginData = createSelector(
+export const sessionLoginDataSelector = createSelector(
   sessionSelector,
   (state: ISessionState) => state.login.data
 );
-const sessionLoginError = createSelector(
+export const sessionLoginErrorSelector = createSelector(
   sessionSelector,
   (state: ISessionState) => state.login.error
 );

@@ -8,7 +8,9 @@ import {
   SessionLoginSuccess,
   SessionLoginFailure,
 } from '../actions';
+import { Injectable } from '@angular/core';
 
+@Injectable()
 export class SessionEffects {
   login$ = createEffect(() => this.actions$.pipe(
     ofType(SessionLoginRequest),
