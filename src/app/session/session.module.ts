@@ -20,6 +20,10 @@ import { SessionEffects } from './store/effects/session.effects';
   ],
   providers: [
     SessionEffects
+  ],
+  exports: [
+    LoginComponent,
+    RegisterComponent,
   ]
 })
 export class SessionModule { }
