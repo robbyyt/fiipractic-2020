@@ -4,10 +4,10 @@
 
 export const environment = {
   production: false,
-  api: "https://api.asii.ro/fiipractic/api",
+  api: 'https://api.asii.ro/fiipractic/api',
   captcha: {
     // https://developers.google.com/recaptcha/docs/faq
-    key: "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI", // and demo secret key:  6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe
+    key: '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI', // and demo secret key:  6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe
   },
 };
 

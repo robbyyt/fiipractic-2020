@@ -13,7 +13,7 @@
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
 $fii-practic-primary: mat-palette($mat-indigo);
-$fii-practic-accent: mat-palette($mat-pink, A200, A100, A400);
+$fii-practic-accent: mat-palette($mat-yellow, 800, A200, A700);
 
 // The warn palette is optional (defaults to red).
 $fii-practic-warn: mat-palette($mat-red);
@@ -33,6 +33,9 @@ $fii-practic-theme: mat-light-theme(
 /* You can add global styles to this file, and also import other style files */
 
 @import "styles/normalize";
+@import "styles/overrides";
+@import "styles/components";
+@import "styles/typography";
 
 html,
 body {

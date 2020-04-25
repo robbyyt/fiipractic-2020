@@ -1,0 +1,5 @@
+@import "~@angular/material/theming";
+
+.color-warn {
+  color: mat-color($fii-practic-accent, 800);
+}

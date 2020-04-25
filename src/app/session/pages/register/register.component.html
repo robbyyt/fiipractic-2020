@@ -1,1 +1,87 @@
-<p>register works!</p>
+<div class="row justify-content-center">
+  <div class="col-md-6">
+    <app-auth-card title="Înregistrare">
+      <form (ngSubmit)="onSubmit()" [formGroup]="registerForm" class="form">
+        <mat-form-field>
+          <input
+            matInput
+            type="text"
+            placeholder="Nume"
+            formControlName="firstName"
+            required
+          />
+          <mat-error *ngIf="registerForm.hasError('firstName', 'required')"
+            >Numele este obligatoriu</mat-error
+          >
+        </mat-form-field>
+        <mat-form-field>
+          <input
+            matInput
+            type="text"
+            placeholder="Prenume"
+            formControlName="lastName"
+            required
+          />
+          <mat-error *ngIf="registerForm.hasError('lastName', 'required')"
+            >Prenumele este obligatoriu</mat-error
+          >
+        </mat-form-field>
+        <mat-form-field>
+          <input
+            matInput
+            type="text"
+            placeholder="Email"
+            formControlName="email"
+            required
+          />
+          <mat-error *ngIf="registerForm.hasError('email', 'required')"
+            >Email-ul este obligatoriu</mat-error
+          >
+        </mat-form-field>
+        <mat-form-field>
+          <input
+            matInput
+            type="password"
+            placeholder="Parola"
+            formControlName="password"
+            required
+          />
+          <mat-error *ngIf="registerForm.hasError('password', 'required')"
+            >Parola este obligatorie</mat-error
+          >
+        </mat-form-field>
+        <p>
+          Înregistrarea presupune că ești de acord cu
+          <a href="#" rel="noopener">termenii și condițiile</a>.
+        </p>
+        <mat-checkbox formControlName="gdprAsii">
+          <span class="color-warn">*</span> Ești de acord ca datele tale să fie
+          colectate și procesate de către ASII conform
+          <a href="#" target="_blank" rel="noopener"
+            >Notei de informare conform GDPR</a
+          >?
+        </mat-checkbox>
+        <mat-checkbox formControlName="gdprCompany">
+          Ești de acord ca datele tale să fie colectate și procesate de
+          companiile partenere conform
+          <a href="#" target="_blank" rel="noopener"
+            >Notei de informare conform GDPR</a
+          >?
+        </mat-checkbox>
+        <div class="captcha-container">
+          <re-captcha
+            [siteKey]="captchaKey"
+            [formControlName]="'captcha'"
+          ></re-captcha>
+        </div>
+        <button
+          mat-flat-button
+          color="accent"
+          [disabled]="registerForm.invalid"
+        >
+          Continua
+        </button>
+      </form>
+    </app-auth-card>
+  </div>
+</div>

@@ -5,24 +5,24 @@ import { ILoginRequestPayload, ILoginResponse } from '../../models';
 import { environment } from 'src/environments/environment';
 import { map } from 'rxjs/operators';
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class SessionService {
   private readonly endpoint = environment.api;
 
-  constructor(
-    private http: HttpClient
-  ) { }
+  constructor(private http: HttpClient) {}
 
   public login(payload: ILoginRequestPayload): Observable<ILoginResponse> {
-    return this.http.post<ILoginResponse>(`${this.endpoint}/login`, payload).pipe(
-      map(user => {
-        if ( user.success ) {
-          localStorage.setItem('user',JSON.stringify(user))
-          localStorage.setItem('token',user.token);
-          return user;
-        }
-      })
-    ); 
+    return this.http
+      .post<ILoginResponse>(`${this.endpoint}/login`, payload)
+      .pipe(
+        map((user) => {
+          if (user.success) {
+            localStorage.setItem('user', JSON.stringify(user));
+            localStorage.setItem('token', user.token);
+            return user;
+          }
+        })
+      );
   }
 }
