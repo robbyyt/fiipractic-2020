@@ -17,11 +17,12 @@ export class RegisterComponent implements OnInit {
       firstName: new FormControl(null, [Validators.required]),
       lastName: new FormControl(null, [Validators.required]),
       email: new FormControl(null, [Validators.required, Validators.email]),
-      password: new FormControl(null, [Validators.required]),
+      password: new FormControl(null, [Validators.required, Validators.minLength(6)]),
       gdprAsii: new FormControl(false, [Validators.required]),
       gdprCompany: new FormControl(false),
       captcha: new FormControl(false),
     });
+    console.log(this.registerForm);
   }
   onSubmit() {
     console.log(this.registerForm.value);
