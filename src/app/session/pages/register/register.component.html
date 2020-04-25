@@ -10,9 +10,9 @@
             formControlName="firstName"
             required
           />
-          <mat-error *ngIf="registerForm.hasError('firstName', 'required')"
-            >Numele este obligatoriu</mat-error
-          >
+          <mat-error *ngIf="registerForm.hasError('firstName', 'required')">
+            Numele este obligatoriu
+          </mat-error>
         </mat-form-field>
         <mat-form-field>
           <input
@@ -22,21 +22,22 @@
             formControlName="lastName"
             required
           />
-          <mat-error *ngIf="registerForm.hasError('lastName', 'required')"
-            >Prenumele este obligatoriu</mat-error
-          >
+          <mat-error *ngIf="registerForm.hasError('lastName', 'required')">
+            Prenumele este obligatoriu
+          </mat-error>
         </mat-form-field>
         <mat-form-field>
           <input
             matInput
-            type="text"
+            ty
+            pe="text"
             placeholder="Email"
             formControlName="email"
             required
           />
           <mat-error *ngIf="registerForm.hasError('email', 'required')"
-            >Email-ul este obligatoriu</mat-error
-          >
+            >Email-ul este obligatoriu
+          </mat-error>
         </mat-form-field>
         <mat-form-field>
           <input
@@ -46,9 +47,9 @@
             formControlName="password"
             required
           />
-          <mat-error *ngIf="registerForm.hasError('password', 'required')"
-            >Parola este obligatorie</mat-error
-          >
+          <mat-error *ngIf="registerForm.hasError('password', 'required')">
+            Parola este obligatorie
+          </mat-error>
         </mat-form-field>
         <p>
           Înregistrarea presupune că ești de acord cu
@@ -69,10 +70,8 @@
           >?
         </mat-checkbox>
         <div class="captcha-container">
-          <re-captcha
-            [siteKey]="captchaKey"
-            [formControlName]="'captcha'"
-          ></re-captcha>
+          <re-captcha [siteKey]="captchaKey" [formControlName]="'captcha'">
+          </re-captcha>
         </div>
         <button
           mat-flat-button

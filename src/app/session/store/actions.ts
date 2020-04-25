@@ -2,7 +2,7 @@ import { createAction, props } from '@ngrx/store';
 
 export const SessionLoginRequest = createAction(
   '[Session] Login Request',
-  props<{ payload: { email: string; password: string; } }>()
+  props<{ payload: { email: string; password: string } }>()
 );
 export const SessionLoginSuccess = createAction(
   '[Session] Login Success',

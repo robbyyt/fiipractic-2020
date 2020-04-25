@@ -5,10 +5,6 @@ import { Component, OnInit, Input } from '@angular/core';
   templateUrl: './auth-card.component.html',
   styleUrls: ['./auth-card.component.scss'],
 })
-export class AuthCardComponent implements OnInit {
+export class AuthCardComponent {
   @Input() title: string;
-
-  constructor() {}
-
-  ngOnInit(): void {}
 }

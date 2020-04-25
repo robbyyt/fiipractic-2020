@@ -1,16 +1,17 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, throwError } from 'rxjs';
 import { ILoginRequestPayload, ILoginResponse } from '../../models';
 import { environment } from 'src/environments/environment';
 import { map } from 'rxjs/operators';
+
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
 export class SessionService {
   private readonly endpoint = environment.api;
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   public login(payload: ILoginRequestPayload): Observable<ILoginResponse> {
     return this.http

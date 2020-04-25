@@ -12,16 +12,20 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class SessionEffects {
-  login$ = createEffect(() => this.actions$.pipe(
-    ofType(SessionLoginRequest),
-    mergeMap((action) => this.sessionService.login(action.payload).pipe(
-      map((response) => SessionLoginSuccess({ payload: response })),
-      catchError((error) => of(SessionLoginFailure({ error })))
-    ))
-  ));
+  login$ = createEffect(() =>
+    this.actions$.pipe(
+      ofType(SessionLoginRequest),
+      mergeMap((action) =>
+        this.sessionService.login(action.payload).pipe(
+          map((response) => SessionLoginSuccess({ payload: response })),
+          catchError((error) => of(SessionLoginFailure({ error })))
+        )
+      )
+    )
+  );
 
   constructor(
     private actions$: Actions,
     private sessionService: SessionService
-  ) {}
+  ) { }
 }

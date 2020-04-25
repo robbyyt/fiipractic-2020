@@ -36,4 +36,4 @@ import {
   ],
   exports: [LoginComponent, RegisterComponent],
 })
-export class SessionModule {}
+export class SessionModule { }

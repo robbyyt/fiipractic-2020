@@ -1,11 +1,13 @@
 .card {
   padding: 4rem;
+
   &__title {
     color: B900;
     font-size: 3em;
     font-weight: 400;
     user-select: none;
   }
+
   &__content {
     margin: 4rem 0;
   }

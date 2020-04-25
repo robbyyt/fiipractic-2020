@@ -7,7 +7,7 @@ import { sessionLoginReducers } from './login.reducers';
 
 const sessionReducers = createReducer(
   sessionInitialState,
-  ...sessionLoginReducers,
+  ...sessionLoginReducers
 );
 
 export function sessionReducer(state: ISessionState, action: Action) {
