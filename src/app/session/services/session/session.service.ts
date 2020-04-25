@@ -22,6 +22,8 @@ export class SessionService {
             localStorage.setItem('user', JSON.stringify(user));
             localStorage.setItem('token', user.token);
             return user;
+          } else {
+            throwError(user);
           }
         })
       );
