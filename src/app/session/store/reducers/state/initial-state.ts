@@ -4,6 +4,6 @@ export const sessionInitialState: ISessionState = {
   login: {
     loading: false,
     data: null,
-    error: null
-  }
+    error: null,
+  },
 };

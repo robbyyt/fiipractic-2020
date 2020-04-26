@@ -7,4 +7,4 @@ import { MaterialModule } from '../material.module';
   imports: [MaterialModule],
   exports: [HeaderComponent, FooterComponent, MaterialModule],
 })
-export class SharedModule {}
+export class SharedModule { }

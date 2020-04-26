@@ -61,11 +61,16 @@ hr {
 // ❯ Typography
 
 // Remove top margins from headings.
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
 
   &:not(:last-child) {
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
   }
 }
 
@@ -88,7 +93,8 @@ a {
     text-decoration: none;
   }
 
-  &:not([href]):not([tabindex]) { // 2
+  &:not([href]):not([tabindex]) {
+    // 2
     color: inherit;
 
     &:focus {
@@ -131,7 +137,8 @@ small {
 }
 
 // Apply default bottom margin only if it isn't the last element.
-ol, ul {
+ol,
+ul {
   margin: 0;
 
   &:not(:last-child) {
@@ -149,11 +156,11 @@ sup {
 }
 
 sub {
-  bottom: -.25em;
+  bottom: -0.25em;
 }
 
 sup {
-  top: -.5em;
+  top: -0.5em;
 }
 
 // ❯ Code
@@ -241,7 +248,8 @@ button,
 [type="submit"] {
   -webkit-appearance: button; // 1
 
-  &::-moz-focus-inner { // 2
+  &::-moz-focus-inner {
+    // 2
     padding: 0;
     border-style: none;
   }
@@ -270,7 +278,7 @@ fieldset {
 // 3. Remove the padding so developers are not caught out when they zero out `fieldset` elements in all browsers.
 legend {
   display: block; // 1
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
   padding: 0; // 3
   width: 100%; // 1
   max-width: 100%; // 1
@@ -343,8 +351,8 @@ table {
 }
 
 caption {
-  padding-top: .75rem;
-  padding-bottom: .75rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
   text-align: left;
   caption-side: bottom;
 }
