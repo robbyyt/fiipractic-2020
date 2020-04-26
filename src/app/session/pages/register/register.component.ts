@@ -22,7 +22,6 @@ export class RegisterComponent implements OnInit {
       gdprCompany: new FormControl(false),
       captcha: new FormControl(false),
     });
-    console.log(this.registerForm);
   }
   onSubmit() {
     console.log(this.registerForm.value);
