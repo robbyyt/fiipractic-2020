@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
-import { ILoginRequestPayload, ILoginResponse } from '../../models';
+import { ILoginRequestPayload, ILoginResponse, IRegisterPayload } from '../../models';
 import { environment } from 'src/environments/environment';
 import { map } from 'rxjs/operators';
 
@@ -27,5 +27,9 @@ export class SessionService {
           }
         })
       );
+  }
+
+  public register(payload: IRegisterPayload): Observable<any> {
+    return this.http.post<any>(`${this.endpoint}/register`, payload);
   }
 }
