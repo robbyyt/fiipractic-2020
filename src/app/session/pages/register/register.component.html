@@ -11,11 +11,11 @@
             matInput
             type="text"
             placeholder="Nume"
-            formControlName="firstName"
+            formControlName="lastName"
             required
           />
-          <mat-error *ngIf="registerForm.hasError('firstName', 'required')">
-            Numele este obligatoriu
+          <mat-error *ngIf="registerForm.get('lastName').getError('required')">
+            Numele este obligatoriu!
           </mat-error>
         </mat-form-field>
         <mat-form-field>
@@ -23,11 +23,11 @@
             matInput
             type="text"
             placeholder="Prenume"
-            formControlName="lastName"
+            formControlName="firstName"
             required
           />
-          <mat-error *ngIf="registerForm.hasError('lastName', 'required')">
-            Prenumele este obligatoriu
+          <mat-error *ngIf="registerForm.get('firstName').getError('required')">
+            Prenumele este obligatoriu!
           </mat-error>
         </mat-form-field>
         <mat-form-field>
@@ -38,8 +38,8 @@
             formControlName="email"
             required
           />
-          <mat-error *ngIf="registerForm.hasError('email', 'required')">
-            Email-ul este obligatoriu
+          <mat-error *ngIf="registerForm.get('email').getError('required')">
+            Email-ul este obligatoriu!
           </mat-error>
         </mat-form-field>
         <mat-form-field>
