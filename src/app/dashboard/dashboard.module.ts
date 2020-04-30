@@ -6,15 +6,17 @@ import { RouterModule } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
 import { StoreModule } from '@ngrx/store';
 import { dashboardReducer } from './store/reducers';
-
-
+import { EffectsModule } from '@ngrx/effects';
+import { DashboardEffects } from './store/effects/index';
+import { UsersComponent } from './pages/users/users.component';
 
 @NgModule({
-  declarations: [DashboardComponent],
+  declarations: [DashboardComponent, UsersComponent],
   imports: [
     SharedModule,
     CommonModule,
     DashboardRoutingModule,
+    EffectsModule.forFeature([DashboardEffects]),
     StoreModule.forFeature('dashboard', dashboardReducer),
     RouterModule,
   ]
