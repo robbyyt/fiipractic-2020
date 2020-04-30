@@ -8,7 +8,7 @@ import { StoreModule } from '@ngrx/store';
 import { dashboardReducer } from './store/reducers';
 import { EffectsModule } from '@ngrx/effects';
 import { DashboardEffects } from './store/effects/index';
-import { UsersComponent } from './pages/users/users.component';
+import { UsersComponent } from './pages';
 
 @NgModule({
   declarations: [DashboardComponent, UsersComponent],
