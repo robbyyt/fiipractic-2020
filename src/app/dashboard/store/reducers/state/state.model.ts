@@ -1,0 +1,2 @@
+export interface IDashboardState {
+}
