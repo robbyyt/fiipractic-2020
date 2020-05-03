@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { LoginComponent, RegisterComponent } from './session/pages';
+import {LoginComponent, RegisterComponent, ResetPasswordComponent} from './session/pages';
 
 const routes: Routes = [
   {
@@ -10,6 +10,10 @@ const routes: Routes = [
   {
     path: 'register',
     component: RegisterComponent,
+  },
+  {
+    path: 'reset-password',
+    component: ResetPasswordComponent,
   },
   {
     path: 'dashboard',
