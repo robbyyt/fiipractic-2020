@@ -1,1 +1,16 @@
-<p>header works!</p>
+<div class="container">
+  <a class="logo" routerLink="/">
+    <img src="../../../../assets/images/svg/fp-logo.svg" alt="logo-fiip">
+  </a>
+  <div class="nav-items-desktop d-none d-lg-flex">
+    <span class="nav-page hover hover-3">Arii</span>
+    <span class="nav-page">Challenge</span>
+    <span class="nav-page">Parteneri</span>
+    <span class="nav-page">Sign in</span>
+  </div>
+  <div class="burger-button">
+    <button mat-icon-button class="d-lg-none" (click)="toggleSidenav()">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </div>
+</div>

@@ -1,1 +1,34 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 25px auto;
+}
+
+.logo {
+  max-width: 170px;
+  
+
+  @media screen and (max-width: 1024px) {
+    max-width: 140px;  
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+.nav-items-desktop {
+  span {
+    font-size: 18px;
+    font-weight: 100;
+  }
+}
+
+.nav-page {
+  margin: auto 1.5em;
+}
+
+
 

@@ -1,9 +1,14 @@
-<header>
-  <h1>Here will be header</h1>
-</header>
-<div class="container">
-  <router-outlet></router-outlet>
-</div>
-<footer>
-  <h1>Here will be footer</h1>
-</footer>
+<mat-sidenav-container fullscreen>
+  <mat-sidenav #sidenav position="end">
+    <app-mobile-menu (sidenavClose)="sidenav.close()"></app-mobile-menu>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <app-header (sidenavToggle)="sidenav.toggle()"></app-header>
+    <div class="container">
+      <router-outlet></router-outlet>
+    </div>
+    <footer>
+      <h1>Here will be footer</h1>
+    </footer>
+  </mat-sidenav-content>
+</mat-sidenav-container>
