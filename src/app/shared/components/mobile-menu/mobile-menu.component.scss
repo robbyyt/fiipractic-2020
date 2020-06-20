@@ -12,9 +12,10 @@ mat-list {
   flex-direction: column;
   height: 100%;
   width: 200px;
+  background-color: #274C5B;
+  color: white;
+  
   button {
     align-self: flex-end;
   }
-  background-color: #274C5B;
-  color: white;
 }
