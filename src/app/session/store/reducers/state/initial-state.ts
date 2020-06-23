@@ -6,4 +6,9 @@ export const sessionInitialState: ISessionState = {
     data: null,
     error: null,
   },
+  register: {
+    loading: false,
+    data: null,
+    error: null,
+  }
 };

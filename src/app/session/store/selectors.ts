@@ -16,3 +16,17 @@ export const sessionLoginErrorSelector = createSelector(
   sessionSelector,
   (state: ISessionState) => state.login.error
 );
+
+// Register Selectors
+export const sessionRegisterLoadingSelector = createSelector(
+  sessionSelector,
+  (state: ISessionState) => state.register.loading
+);
+export const sessionRegisterDataSelector = createSelector(
+  sessionSelector,
+  (state: ISessionState) => state.register.data
+);
+export const sessionRegisterErrorSelector = createSelector(
+  sessionSelector,
+  (state: ISessionState) => state.register.error
+);

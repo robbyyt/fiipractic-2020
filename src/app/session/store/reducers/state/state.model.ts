@@ -4,4 +4,9 @@ export interface ISessionState {
     data: any;
     error: any;
   };
+  register: {
+    loading: boolean;
+    data: any;
+    error: any;
+  };
 }
