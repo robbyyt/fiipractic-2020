@@ -2,8 +2,8 @@
   <div class="col-md-6">
     <app-auth-card title="Înregistrare">
       <form
-        (ngSubmit)="onSubmit()"
         [formGroup]="registerForm"
+        (ngSubmit)="onSubmit()"
         class="form"
       >
         <mat-form-field>
@@ -33,7 +33,7 @@
         <mat-form-field>
           <input
             matInput
-            type="text"
+            type="email"
             placeholder="Email"
             formControlName="email"
             required
@@ -53,7 +53,7 @@
             Parola este obligatorie!
           </mat-error>
           <mat-error *ngIf="registerForm.get('password').getError('minlength')">
-            Parola trebuie sa contina minim {{ registerForm.get('password').getError('minlength').requiredLength }}
+            Parola trebuie să conțina minim {{ registerForm.get('password').getError('minlength').requiredLength }}
             caractere!
           </mat-error>
         </mat-form-field>
@@ -94,7 +94,7 @@
           color="accent"
           [disabled]="registerForm.invalid"
         >
-          Continua
+          Continuă
         </button>
       </form>
     </app-auth-card>

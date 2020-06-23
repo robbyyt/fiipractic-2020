@@ -1,5 +1,6 @@
 <mat-card class="card mat-elevation-z8">
-  <mat-card-title class="card__title">{{ title }}</mat-card-title>
+  <mat-card-title *ngIf="title" class="card__title">{{ title }}</mat-card-title>
+  <h4 *ngIf="subTitle" class="card__subtitle">{{ subTitle }}</h4>
   <mat-card-content class="card__content">
     <ng-content></ng-content>
   </mat-card-content>

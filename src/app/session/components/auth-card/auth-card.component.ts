@@ -7,4 +7,5 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class AuthCardComponent {
   @Input() title: string;
+  @Input() subTitle: string;
 }

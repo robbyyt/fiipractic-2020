@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LoginComponent, RegisterComponent } from './pages';
+import { LoginComponent, RegisterComponent, ResetPasswordComponent } from './pages';
 import { StoreModule } from '@ngrx/store';
 import { sessionReducer } from './store/reducers';
 import { HttpClientModule } from '@angular/common/http';
@@ -16,7 +16,7 @@ import {
 } from 'ng-recaptcha';
 
 @NgModule({
-  declarations: [LoginComponent, RegisterComponent, AuthCardComponent],
+  declarations: [LoginComponent, RegisterComponent, AuthCardComponent, ResetPasswordComponent],
   imports: [
     CommonModule,
     HttpClientModule,
