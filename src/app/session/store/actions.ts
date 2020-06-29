@@ -21,6 +21,6 @@ export const SessionRegisterSuccess = createAction(
   props<{ [key: string]: any }>() // TODO change with right interface
 );
 export const SessionRegisterFailure = createAction(
-  '[Session] Register Success',
+  '[Session] Register Failure',
   props<{ [key: string]: any }>() // TODO change with right interface
 );
